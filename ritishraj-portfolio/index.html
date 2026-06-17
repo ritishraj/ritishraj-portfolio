@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Ritish Raj — Java Backend Developer | Spring Boot | REST APIs | Open to opportunities"/>
+  <meta name="author" content="Ritish Raj"/>
+  <meta property="og:title" content="Ritish Raj — Backend Developer"/>
+  <meta property="og:description" content="Final-year CSE student building secure, scalable backend systems with Java & Spring Boot."/>
+  <title>Ritish Raj — Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur2"></div>
+
+<!-- SCROLL PROGRESS -->
+<div id="sp"></div>
+
+<!-- CANVAS BACKGROUND -->
+<canvas id="hc"></canvas>
+
+<!-- ════════════════════════════════════════════
+     NAV
+════════════════════════════════════════════ -->
+<nav>
+  <a href="#" class="nlogo">ritish<span>raj</span>.dev</a>
+  <ul class="nul">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#live">Live Apps</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:ritishbarnwal2004@gmail.com" class="nhire">Hire Me ↗</a>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hgrid">
+
+    <!-- LEFT -->
+    <div>
+      <div class="hbadge"><span class="hdot"></span> Open to full-time opportunities</div>
+      <h1 class="hh1">Ritish<br><span class="g">Raj</span></h1>
+      <p class="hsub">// <span class="hl">Backend Developer</span> &nbsp;·&nbsp; Java · Spring Boot · REST APIs</p>
+      <p class="hp">Final-year CSE student at GKV Haridwar building secure, scalable backend systems with clean architecture — JWT-protected APIs, RBAC, MongoDB, MySQL &amp; SQLite. Currently exploring Microservices &amp; Docker.</p>
+      <div class="hbtns">
+        <a href="#projects" class="bta">See My Work →</a>
+        <a href="https://github.com/ritishraj" target="_blank" rel="noopener" class="btb">⌥ GitHub</a>
+        <a href="https://linkedin.com/in/ritish-raj" target="_blank" rel="noopener" class="btb">in LinkedIn</a>
+      </div>
+      <div class="hstats">
+        <div><div class="hsn">9+</div><div class="hsl">Repos</div></div>
+        <div><div class="hsn">3</div><div class="hsl">Live Apps</div></div>
+        <div><div class="hsn">50</div><div class="hsl">LeetCode Days</div></div>
+        <div><div class="hsn">2026</div><div class="hsl">Graduating</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT — Terminal window -->
+    <div>
+      <div class="term">
+        <div class="tbar">
+          <span class="tbd tr"></span>
+          <span class="tbd ty"></span>
+          <span class="tbd tg"></span>
+          <span class="ttl">HRController.java</span>
+        </div>
+        <div class="tbody"><pre><span class="cm">// HR Employee Management System</span>
+<span class="an">@RestController</span>
+<span class="an">@RequestMapping</span>(<span class="str">"/api/v1/employees"</span>)
+<span class="kw">public class</span> <span class="cl">HRController</span> {
+
+  <span class="an">@Autowired</span>
+  <span class="kw">private</span> <span class="cl">EmployeeService</span> service;
+
+  <span class="an">@PreAuthorize</span>(<span class="str">"hasRole('ADMIN')"</span>)
+  <span class="an">@GetMapping</span>(<span class="str">"/all"</span>)
+  <span class="kw">public</span> <span class="cl">ResponseEntity</span>&lt;<span class="cl">List</span>&lt;<span class="cl">Employee</span>&gt;&gt;
+      <span class="fn">getAll</span>() {
+    <span class="kw">return</span> <span class="cl">ResponseEntity</span>
+      .<span class="fn">ok</span>(service.<span class="fn">findAll</span>());
+  }
+
+  <span class="an">@PostMapping</span>(<span class="str">"/add"</span>)
+  <span class="kw">public</span> <span class="cl">ResponseEntity</span>&lt;<span class="cl">Employee</span>&gt;
+      <span class="fn">add</span>(<span class="an">@Valid</span> <span class="an">@RequestBody</span>
+      <span class="cl">EmployeeDTO</span> dto) {
+    <span class="kw">return</span> <span class="cl">ResponseEntity</span>
+      .<span class="fn">status</span>(<span class="num">201</span>)
+      .<span class="fn">body</span>(service.<span class="fn">save</span>(dto));
+  }
+}</pre></div>
+      </div>
+      <div class="trow">
+        <span class="tpill">Java 17</span>
+        <span class="tpill">Spring Boot 3</span>
+        <span class="tpill">JWT Auth</span>
+        <span class="tpill">MongoDB</span>
+        <span class="tpill">MySQL</span>
+        <span class="tpill">SQLite</span>
+        <span class="tpill">🐋 Docker*</span>
+        <span class="tpill">⚙️ Microservices*</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="d"/>
+
+<!-- ════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════ -->
+<section class="s" id="skills">
+  <span class="se">// expertise</span>
+  <h2 class="sh rev">Technical Skills</h2>
+  <p class="sd rev">Backend-first stack with Java at the core. Expanding into cloud and containerization.</p>
+
+  <div class="skg">
+    <div class="skc rev">
+      <div class="ski">☕</div>
+      <div class="skcat">Primary Language</div>
+      <div class="skn">Java</div>
+      <div class="tags"><span class="tag">Core Java</span><span class="tag">OOP</span><span class="tag">DSA</span><span class="tag">Collections</span><span class="tag">Generics</span></div>
+    </div>
+    <div class="skc rev d1">
+      <div class="ski">🍃</div>
+      <div class="skcat">Backend Framework</div>
+      <div class="skn">Spring Ecosystem</div>
+      <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Spring Security</span><span class="tag">Spring Data JPA</span><span class="tag">Hibernate</span></div>
+    </div>
+    <div class="skc rev d2">
+      <div class="ski">🔐</div>
+      <div class="skcat">APIs &amp; Security</div>
+      <div class="skn">REST &amp; Auth</div>
+      <div class="tags"><span class="tag">REST APIs</span><span class="tag">JWT</span><span class="tag">RBAC</span><span class="tag">Spring Security</span></div>
+    </div>
+    <div class="skc rev">
+      <div class="ski">🗄️</div>
+      <div class="skcat">Databases</div>
+      <div class="skn">MySQL · MongoDB · SQLite</div>
+      <div class="tags"><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">SQLite</span><span class="tag">JPA</span><span class="tag">DBMS</span></div>
+    </div>
+    <div class="skc rev d1">
+      <div class="ski">🛠️</div>
+      <div class="skcat">Dev Tooling</div>
+      <div class="skn">Git &amp; Build</div>
+      <div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Maven</span><span class="tag">Postman</span><span class="tag">VS Code</span></div>
+    </div>
+    <div class="skc rev d2">
+      <div class="ski">🐍</div>
+      <div class="skcat">Secondary · AI/ML</div>
+      <div class="skn">Python &amp; NLP</div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">ML Basics</span><span class="tag">ANN/CNN</span></div>
+    </div>
+  </div>
+
+  <div class="lrow rev">
+    <span style="font-size:.78rem;color:var(--muted);align-self:center;margin-right:.3rem">🌱 Currently learning:</span>
+    <span class="lbadge">🐋 Docker</span>
+    <span class="lbadge">⚙️ Microservices</span>
+    <span class="lbadge">⚛️ React</span>
+    <span class="lbadge">🟢 Node.js</span>
+  </div>
+</section>
+
+<hr class="d"/>
+
+<!-- ════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════ -->
+<section class="s" id="projects">
+  <span class="se">// built by me</span>
+  <h2 class="sh rev">Projects</h2>
+  <p class="sd rev">Production-grade backends, real-time apps, and polished frontends.</p>
+
+  <div class="pjg">
+
+    <!-- FEATURED — HR EMS -->
+    <div class="pjfeat rev">
+      <div class="pjfl">
+        <span class="pjey">⭐ Featured Project</span>
+        <div class="pjt">HR Employee Management System</div>
+        <p class="pjd">Production-grade backend for HR teams — JWT-secured REST APIs with full role-based access control, clean layered architecture, and MongoDB as a flexible document store.</p>
+        <ul class="pjbul">
+          <li>Secure REST APIs for CRUD: add, update, delete, fetch employees</li>
+          <li>JWT authentication + Admin vs Employee RBAC</li>
+          <li>Controller → Service → Repository clean separation</li>
+          <li>MongoDB backend; all endpoints validated in Postman</li>
+        </ul>
+        <div class="pjlks">
+          <a href="https://github.com/ritishraj" target="_blank" rel="noopener" class="pjlk">⌥ GitHub</a>
+        </div>
+        <div class="pjstk">
+          <span class="tag">Spring Boot</span><span class="tag">MongoDB</span>
+          <span class="tag">JWT</span><span class="tag">Spring Security</span>
+          <span class="tag">REST API</span><span class="tag">RBAC</span>
+        </div>
+      </div>
+      <div class="pjfr">
+        <div class="mb"><div class="mbl">Backend</div><div class="mbv">Spring Boot 3 + Spring Security</div></div>
+        <div class="mb"><div class="mbl">Database</div><div class="mbv">MongoDB (NoSQL Document Store)</div></div>
+        <div class="mb"><div class="mbl">Auth</div><div class="mbv">JWT + Role-Based Access Control</div></div>
+        <div class="mb"><div class="mbl">Architecture</div><div class="mbv">Layered: Controller → Service → Repo</div></div>
+        <div class="mb"><div class="mbl">Testing</div><div class="mbv">Postman — all endpoints verified</div></div>
+      </div>
+    </div>
+
+    <!-- EXPENSE TRACKER — NEW SQLite PROJECT -->
+    <div class="pjfeat rev" style="margin-top:0">
+      <div class="pjfl">
+        <span class="pjey" style="color:var(--cyan);background:rgba(34,211,238,.08);border-color:rgba(34,211,238,.2)">🆕 New Project · SQLite</span>
+        <div class="pjt">Personal Expense Tracker</div>
+        <p class="pjd">A full-featured command-line + REST API expense tracker backed by SQLite. Track income and expenses by category, generate monthly summaries, and export reports — all with a lightweight embedded database requiring zero configuration.</p>
+        <ul class="pjbul">
+          <li>CRUD operations on expenses/income using SQLite via JDBC</li>
+          <li>Category-wise breakdown: Food, Transport, Rent, Entertainment, etc.</li>
+          <li>Monthly summary reports with total spent vs budget alerts</li>
+          <li>REST API layer with Spring Boot for frontend-ready integration</li>
+          <li>SQLite chosen for portability — single file, zero server setup</li>
+        </ul>
+        <div class="pjlks">
+          <a href="https://github.com/ritishraj" target="_blank" rel="noopener" class="pjlk">⌥ GitHub</a>
+        </div>
+        <div class="pjstk">
+          <span class="tag">Java</span><span class="tag">SQLite</span>
+          <span class="tag">Spring Boot</span><span class="tag">JDBC</span>
+          <span class="tag">REST API</span><span class="tag">Maven</span>
+        </div>
+      </div>
+      <div class="pjfr">
+        <div class="mb"><div class="mbl">Database</div><div class="mbv">SQLite (embedded, portable)</div></div>
+        <div class="mb"><div class="mbl">Backend</div><div class="mbv">Java + Spring Boot + JDBC Template</div></div>
+        <div class="mb"><div class="mbl">Features</div><div class="mbv">CRUD · Categories · Monthly Reports</div></div>
+        <div class="mb"><div class="mbl">Why SQLite</div><div class="mbv">Zero config, single file, perfect for local apps</div></div>
+        <div class="mb"><div class="mbl">API</div><div class="mbv">REST endpoints for frontend integration</div></div>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="pjc c6 rev">
+      <div class="pjct"><div class="pjico">👥</div><a href="https://github.com/ritishraj" target="_blank" rel="noopener" class="pjlk" style="font-size:.72rem;padding:.3rem .7rem">GitHub ↗</a></div>
+      <span class="pjlt">Java · Spring Boot</span>
+      <div class="pjn">Employee Management System</div>
+      <p class="pjp">Full CRUD backend for employee records. Spring Data JPA + Hibernate eliminate manual SQL; clean layered architecture throughout.</p>
+      <div class="pjstk"><span class="tag">Spring Boot</span><span class="tag">MySQL</span><span class="tag">JPA</span><span class="tag">Hibernate</span></div>
+    </div>
+
+    <div class="pjc c6 rev d1">
+      <div class="pjct"><div class="pjico">🤖</div><a href="https://github.com/ritishraj/chatbot" target="_blank" rel="noopener" class="pjlk" style="font-size:.72rem;padding:.3rem .7rem">GitHub ↗</a></div>
+      <span class="pjlt">JavaScript · PHP</span>
+      <div class="pjn">AI Chatbot</div>
+      <p class="pjp">NLP-based chatbot with HTML, CSS, JS and PHP, developed during IBM SkillsBuild internship while studying conversational AI architectures.</p>
+      <div class="pjstk"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">NLP</span></div>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="pjc c4 rev">
+      <div class="pjct"><div class="pjico">🌤️</div><a href="https://weather-ritishraj.netlify.app/" target="_blank" rel="noopener" class="pjlk live" style="font-size:.72rem;padding:.3rem .7rem">● Live</a></div>
+      <span class="pjlt">React · JavaScript</span>
+      <div class="pjn">Weather Dashboard</div>
+      <p class="pjp">Real-time India weather app built with React. Error handling for bad cities &amp; network failures. Live on Netlify.</p>
+      <div class="pjstk"><span class="tag">React</span><span class="tag">REST API</span><span class="tag">Netlify</span></div>
+    </div>
+    <div class="pjc c4 rev d1">
+      <div class="pjct"><div class="pjico">💳</div><a href="https://ritishraj-paymentform.netlify.app/" target="_blank" rel="noopener" class="pjlk live" style="font-size:.72rem;padding:.3rem .7rem">● Live</a></div>
+      <span class="pjlt">HTML · CSS</span>
+      <div class="pjn">Payment Form</div>
+      <p class="pjp">Validated payment checkout with card type selection (Visa/Rupay/Mastercard) and clean responsive layout. Live on Netlify.</p>
+      <div class="pjstk"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Validation</span></div>
+    </div>
+    <div class="pjc c4 rev d2">
+      <div class="pjct"><div class="pjico">🏢</div><a href="https://ai-ems-system.vercel.app/" target="_blank" rel="noopener" class="pjlk live" style="font-size:.72rem;padding:.3rem .7rem">● Live</a></div>
+      <span class="pjlt">React · Node.js</span>
+      <div class="pjn">AI EMS System</div>
+      <p class="pjp">Full-stack Employee Management with React frontend and Node.js backend, deployed live on Vercel.</p>
+      <div class="pjstk"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Vercel</span></div>
+    </div>
+
+    <!-- ROW 4 -->
+    <div class="pjc c4 rev">
+      <div class="pjct"><div class="pjico">🎵</div><a href="https://github.com/ritishraj/spotify-clone" target="_blank" rel="noopener" class="pjlk" style="font-size:.72rem;padding:.3rem .7rem">↗</a></div>
+      <span class="pjlt">HTML · CSS</span>
+      <div class="pjn">Spotify Clone</div>
+      <p class="pjp">Pixel-faithful Spotify UI clone — advanced CSS layout, flexbox, and design precision. Zero frameworks.</p>
+      <div class="pjstk"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">UI Design</span></div>
+    </div>
+    <div class="pjc c4 rev d1">
+      <div class="pjct"><div class="pjico">🎬</div><a href="https://github.com/ritishraj/netflixclone" target="_blank" rel="noopener" class="pjlk" style="font-size:.72rem;padding:.3rem .7rem">↗</a></div>
+      <span class="pjlt">CSS · HTML</span>
+      <div class="pjn">Netflix Clone</div>
+      <p class="pjp">Netflix landing page replica with advanced CSS, hover effects, and fully responsive design — pure HTML &amp; CSS.</p>
+      <div class="pjstk"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span></div>
+    </div>
+    <div class="pjc c4 rev d2">
+      <div class="pjct"><div class="pjico">🌐</div><a href="https://ritishraj.github.io/" target="_blank" rel="noopener" class="pjlk live" style="font-size:.72rem;padding:.3rem .7rem">● Live</a></div>
+      <span class="pjlt">CSS · Python</span>
+      <div class="pjn">Portfolio v1</div>
+      <p class="pjp">Original personal portfolio built with CSS and Python framework, live on GitHub Pages.</p>
+      <div class="pjstk"><span class="tag">CSS</span><span class="tag">GitHub Pages</span></div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="d"/>
+
+<!-- ════════════════════════════════════════════
+     LIVE DEMOS
+════════════════════════════════════════════ -->
+<section class="s" id="live">
+  <span class="se">// deployed &amp; live</span>
+  <h2 class="sh rev">Live Applications</h2>
+  <p class="sd rev">Three apps running in production right now — click to explore.</p>
+
+  <div class="liveg">
+    <div class="livc rev">
+      <div class="livp" style="background:linear-gradient(135deg,#0d1b3e,#0a2952)">
+        🌤️<span class="livpl">● Live on Netlify</span>
+      </div>
+      <div class="livb">
+        <div class="livt">Weather Dashboard for India</div>
+        <div class="livd">React app fetching real-time weather for any Indian city via public REST API. Error handling for invalid inputs and network failures.</div>
+        <div class="livf">
+          <span class="livu">weather-ritishraj.netlify.app</span>
+          <a href="https://weather-ritishraj.netlify.app/" target="_blank" rel="noopener" class="livbtn">Visit ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="livc rev d1">
+      <div class="livp" style="background:linear-gradient(135deg,#0f1f0d,#0d2211)">
+        💳<span class="livpl">● Live on Netlify</span>
+      </div>
+      <div class="livb">
+        <div class="livt">Payment Form</div>
+        <div class="livd">Validated payment checkout with user info, card selection (Visa/Rupay/Mastercard) and field validation for all required inputs.</div>
+        <div class="livf">
+          <span class="livu">ritishraj-paymentform.netlify.app</span>
+          <a href="https://ritishraj-paymentform.netlify.app/" target="_blank" rel="noopener" class="livbtn">Visit ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="livc rev d2">
+      <div class="livp" style="background:linear-gradient(135deg,#1a0d2e,#16072b)">
+        🏢<span class="livpl">● Live on Vercel</span>
+      </div>
+      <div class="livb">
+        <div class="livt">AI EMS System</div>
+        <div class="livd">Full-stack Employee Management System with React frontend and Node.js backend, fully deployed on Vercel with live API endpoints.</div>
+        <div class="livf">
+          <span class="livu">ai-ems-system.vercel.app</span>
+          <a href="https://ai-ems-system.vercel.app/" target="_blank" rel="noopener" class="livbtn">Visit ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="d"/>
+
+<!-- ════════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════════ -->
+<section class="s" id="experience">
+  <span class="se">// work history</span>
+  <h2 class="sh rev">Experience</h2>
+  <p class="sd rev">Internship in AI/ML at IBM, campus leadership, and consistent self-driven projects.</p>
+
+  <div class="expl">
+    <div class="expc rev">
+      <div class="explo ibm">IBM</div>
+      <div>
+        <span class="expbadge intern">🏆 Internship</span>
+        <div class="expr">AI / ML Intern</div>
+        <div class="exco">IBM SkillsBuild · CRMBOX</div>
+        <div class="expe">June 2024 – July 2024 &nbsp;·&nbsp; Remote</div>
+        <ul class="exppts">
+          <li>Built NLP-based chatbot applications using Python as part of a structured AI/ML program</li>
+          <li>Applied foundational ML algorithms: Regression, Classification, and Clustering on real datasets</li>
+          <li>Studied and implemented ANN, CNN, and RNN architectures and their introductory models</li>
+          <li>Received Certificate of Achievement and Certificate of Appreciation from IBM SkillsBuild</li>
+        </ul>
+        <div class="expsk">
+          <span class="tag">Python</span><span class="tag">NLP</span>
+          <span class="tag">Machine Learning</span><span class="tag">ANN · CNN · RNN</span>
+          <span class="tag">Chatbot Dev</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="expc rev">
+      <div class="explo ist">IST</div>
+      <div>
+        <span class="expbadge campus">🌱 Campus Role</span>
+        <div class="expr">Campus Ambassador</div>
+        <div class="exco">Internshala Trainings · GKV Haridwar</div>
+        <div class="expe">2024 &nbsp;·&nbsp; On Campus</div>
+        <ul class="exppts">
+          <li>Promoted Internshala Training programs and workshops to fellow students on campus</li>
+          <li>Completed Tower 8 Workshop — hands-on field event management experience</li>
+          <li>Drove student awareness of professional development resources and certifications</li>
+        </ul>
+        <div class="expsk">
+          <span class="tag">Community Building</span><span class="tag">Communication</span><span class="tag">Leadership</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="d"/>
+
+<!-- ════════════════════════════════════════════
+     GITHUB
+════════════════════════════════════════════ -->
+<section class="s" id="github">
+  <span class="se">// open source</span>
+  <h2 class="sh rev">GitHub</h2>
+  <p class="sd rev">9 public repositories — consistently building and shipping code.</p>
+
+  <div class="ghtop rev">
+    <div class="ghsb"><span class="ghsi">📦</span><div><div class="ghsn">9</div><div class="ghsl">Public Repos</div></div></div>
+    <div class="ghsb"><span class="ghsi">⭐</span><div><div class="ghsn">13</div><div class="ghsl">Total Stars</div></div></div>
+    <div class="ghsb"><span class="ghsi">👥</span><div><div class="ghsn">4</div><div class="ghsl">Followers</div></div></div>
+    <div class="ghsb"><span class="ghsi">🔀</span><div><div class="ghsn">56</div><div class="ghsl">Commits</div></div></div>
+  </div>
+
+  <div class="repog">
+    <a href="https://github.com/ritishraj/ritishraj" target="_blank" rel="noopener" class="repoc rev"><div class="repon">📋 ritishraj/ritishraj</div><div class="repod">Personal GitHub README — projects showcase, tech stack, and profile badges</div><div class="repof"><span class="repol"><span class="ld" style="background:#563d7c"></span>Markdown</span><span class="repos">★ 2</span></div></a>
+    <a href="https://github.com/ritishraj/ritishraj.github.io" target="_blank" rel="noopener" class="repoc rev d1"><div class="repon">🌐 ritishraj.github.io</div><div class="repod">Portfolio site built with CSS and Python framework, live on GitHub Pages</div><div class="repof"><span class="repol"><span class="ld" style="background:#563d7c"></span>CSS</span><span class="repos">★ 2</span></div></a>
+    <a href="https://github.com/ritishraj/chatbot" target="_blank" rel="noopener" class="repoc rev d2"><div class="repon">🤖 chatbot</div><div class="repod">Simple chatbot using HTML, CSS, JS, and PHP — built during IBM internship</div><div class="repof"><span class="repol"><span class="ld" style="background:#f1e05a"></span>JavaScript</span><span class="repos">★ 2</span></div></a>
+    <a href="https://weather-ritishraj.netlify.app" target="_blank" rel="noopener" class="repoc rev"><div class="repon">🌤️ Weather-App-JavaScript</div><div class="repod">Real-time weather dashboard for India, deployed live on Netlify</div><div class="repof"><span class="repol"><span class="ld" style="background:#f1e05a"></span>JavaScript</span><span class="repos">★ 1</span></div></a>
+    <a href="https://ai-ems-system.vercel.app" target="_blank" rel="noopener" class="repoc rev d1"><div class="repon">🏢 AI-EMS-System</div><div class="repod">Full-stack Employee Management with React + Node.js, live on Vercel</div><div class="repof"><span class="repol"><span class="ld" style="background:#f1e05a"></span>JavaScript</span><span class="repos">★ 1</span></div></a>
+    <a href="https://ritishraj-paymentform.netlify.app" target="_blank" rel="noopener" class="repoc rev d2"><div class="repon">💳 Payment-Form</div><div class="repod">Validated payment checkout form — HTML &amp; CSS, live on Netlify</div><div class="repof"><span class="repol"><span class="ld" style="background:#e34c26"></span>HTML</span><span class="repos">★ 2</span></div></a>
+    <a href="https://github.com/ritishraj/spotify-clone" target="_blank" rel="noopener" class="repoc rev"><div class="repon">🎵 spotify-clone</div><div class="repod">Pixel-faithful Spotify UI clone in pure HTML &amp; CSS</div><div class="repof"><span class="repol"><span class="ld" style="background:#e34c26"></span>HTML</span><span class="repos">★ 2</span></div></a>
+    <a href="https://github.com/ritishraj/netflixclone" target="_blank" rel="noopener" class="repoc rev d1"><div class="repon">🎬 netflixclone</div><div class="repod">Netflix landing page with responsive CSS layout and hover interactions</div><div class="repof"><span class="repol"><span class="ld" style="background:#563d7c"></span>CSS</span><span class="repos">★ 2</span></div></a>
+    <a href="https://github.com/ritishraj" target="_blank" rel="noopener" class="repoc rev d2"><div class="repon">📁 portfoliowebsiteforshubh</div><div class="repod">Portfolio website using Python framework — visit ritishraj.github.io</div><div class="repof"><span class="repol"><span class="ld" style="background:#563d7c"></span>SCSS</span><span class="repos">★ 2</span></div></a>
+  </div>
+</section>
+
+<hr class="d"/>
+
+<!-- ════════════════════════════════════════════
+     EDUCATION
+════════════════════════════════════════════ -->
+<section class="s" id="education">
+  <span class="se">// academic background</span>
+  <h2 class="sh rev">Education</h2>
+  <div class="edutl">
+    <div class="edui rev">
+      <div class="edud">B.Tech in Computer Science Engineering</div>
+      <div class="edus">Gurukula Kangri Vishwavidyalaya, Haridwar, Uttarakhand</div>
+      <div class="edupe">2022 – 2026 · Expected</div>
+    </div>
+    <div class="edui rev">
+      <div class="edud">Senior Secondary — Science Stream (BSEB)</div>
+      <div class="edus">Dwarka High School, Patna, Bihar</div>
+      <div class="edupe">2020 – 2022</div>
+    </div>
+    <div class="edui rev">
+      <div class="edud">Secondary (CBSE)</div>
+      <div class="edus">Kiddy Convent High School, Patna, Bihar</div>
+      <div class="edupe">2019 – 2020</div>
+    </div>
+  </div>
+</section>
+
+<hr class="d"/>
+
+<!-- ════════════════════════════════════════════
+     CERTIFICATIONS
+════════════════════════════════════════════ -->
+<section class="s" id="certs">
+  <span class="se">// credentials</span>
+  <h2 class="sh rev">Certifications &amp; Achievements</h2>
+  <div class="certg">
+    <div class="certc rev"><div class="certico ibm">🤖</div><div><div class="certtt">Machine Learning &amp; AI Fundamentals</div><div class="certby">IBM SkillsBuild</div></div></div>
+    <div class="certc rev d1"><div class="certico nptel">🎓</div><div><div class="certtt">Enhancing Soft Skills &amp; Personality</div><div class="certby">NPTEL</div></div></div>
+    <div class="certc rev d2"><div class="certico ach">🏆</div><div><div class="certtt">Certificate of Achievement</div><div class="certby">IBM SkillsBuild · CRMBOX</div></div></div>
+    <div class="certc rev"><div class="certico leet">🧩</div><div><div class="certtt">50 Days LeetCode Challenge</div><div class="certby">LeetCode · Consistent Problem Solving</div></div></div>
+  </div>
+</section>
+
+<hr class="d"/>
+
+<!-- ════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════ -->
+<section class="s" id="contact">
+  <div class="cshell rev">
+    <div class="cglow"></div>
+    <span class="se" style="text-align:center;display:block">// let's work together</span>
+    <h2 class="ch2">Open to Opportunities</h2>
+    <p class="cp">Looking for Software Developer or Backend Developer roles. I ship clean code, learn fast, and care about building reliable systems. Let's talk.</p>
+    <div class="chips">
+      <a href="mailto:ritishbarnwal2004@gmail.com" class="chip">✉ ritishbarnwal2004@gmail.com</a>
+      <a href="tel:+919204235456" class="chip">📞 +91 9204235456</a>
+      <a href="https://github.com/ritishraj" target="_blank" rel="noopener" class="chip">⌥ github.com/ritishraj</a>
+      <a href="https://linkedin.com/in/ritish-raj" target="_blank" rel="noopener" class="chip">in LinkedIn</a>
+      <a href="https://leetcode.com/u/ritishraj/" target="_blank" rel="noopener" class="chip">🧩 LeetCode</a>
+      <a href="https://twitter.com/RitishBarnwal" target="_blank" rel="noopener" class="chip">𝕏 @RitishBarnwal</a>
+    </div>
+    <a href="mailto:ritishbarnwal2004@gmail.com" class="bta" style="display:inline-flex">Send Email →</a>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <span class="fbrand"><span>ritishraj</span>.dev &nbsp;·&nbsp; Haridwar, India</span>
+  <div class="flinks">
+    <a href="https://github.com/ritishraj" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/ritish-raj" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://leetcode.com/u/ritishraj/" target="_blank" rel="noopener">LeetCode</a>
+    <a href="mailto:ritishbarnwal2004@gmail.com">Email</a>
+  </div>
+  <span class="fcopy">© 2026 Ritish Raj</span>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
