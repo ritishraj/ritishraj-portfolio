@@ -2,7 +2,7 @@
 
 **Live at:** `https://ritishraj.github.io/` *(after deployment)*
 
-A professional portfolio website built with clean, separated HTML / CSS / JS — ready to deploy on GitHub Pages in under 5 minutes.
+A professional My portfolio website built with clean, separated HTML / CSS / JS — ready to deploy on GitHub Pages in under 5 minutes.
 
 ---
 
